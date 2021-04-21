@@ -1,0 +1,26 @@
+{
+  "name": "EvaluationSheet",
+  "fields": [
+    {
+      "fieldName": "atout",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "faibless",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20210313122729",
+  "entityTableName": "evaluation_sheet",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "interviewapp",
+  "applications": "*",
+  "microserviceName": "interviewapp"
+}

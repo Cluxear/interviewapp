@@ -1,0 +1,57 @@
+
+
+
+
+entity Interview {
+	interviewDate Instant,
+    createdAt Instant,
+    modifiedAt Instant,
+    resultAttributedAt Instant,
+    type InterviewType,
+    result InterviewResult,
+    isDateFixed Boolean    
+}
+
+entity EvaluationSheet {
+    atout String,
+    faibless String
+    
+}
+enum InterviewResult {
+	POSITIVE,
+    NEGATIVE,
+    PENDING
+}
+enum InterviewType {
+	TECHNICAL_INTERVIEW,
+    HR_INTERVIEW
+}
+entity Event { 
+	
+    start Instant,
+    finish Instant
+    
+}
+
+entity InterviewEvent { 
+    isFixed Boolean,
+    title String,
+    description String
+}
+
+relationship OneToOne {
+	Interview{evaluationSheet} to EvaluationSheet
+}
+relationship OneToOne {
+	InterviewEvent{event} to Event with jpaDerivedIdentifier
+}
+relationship OneToOne {
+	Interview{evaluationSheet} to EvaluationSheet
+}
+
+
+// Use Data Transfer Objects (DTO)
+ dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl

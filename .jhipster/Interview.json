@@ -1,0 +1,63 @@
+{
+  "name": "Interview",
+  "fields": [
+    {
+      "fieldName": "interviewDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "modifiedAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "resultAttributedAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "InterviewType",
+      "fieldValues": "TECHNICAL_INTERVIEW,HR_INTERVIEW"
+    },
+    {
+      "fieldName": "result",
+      "fieldType": "InterviewResult",
+      "fieldValues": "POSITIVE,NEGATIVE,PENDING"
+    },
+    {
+      "fieldName": "isDateFixed",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "note",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "evaluationSheet",
+      "otherEntityRelationshipName": "interview",
+      "relationshipName": "evaluationSheet",
+      "otherEntityField": "id",
+      "ownerSide": true
+    }
+  ],
+  "changelogDate": "20210313122629",
+  "entityTableName": "interview",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "interviewapp",
+  "applications": "*",
+  "microserviceName": "interviewapp",
+  "searchEngine": false,
+  "databaseType": "sql"
+}

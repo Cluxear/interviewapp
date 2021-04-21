@@ -1,0 +1,40 @@
+{
+  "name": "InterviewEvent",
+  "fields": [
+    {
+      "fieldName": "isFixed",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "title",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "event",
+      "otherEntityRelationshipName": "interviewEvent",
+      "relationshipName": "event",
+      "otherEntityField": "id",
+      "ownerSide": true,
+      "useJPADerivedIdentifier": true
+    }
+  ],
+  "changelogDate": "20210313122929",
+  "entityTableName": "interview_event",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "interviewapp",
+  "applications": "*",
+  "microserviceName": "interviewapp"
+}
